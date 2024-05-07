@@ -1,10 +1,14 @@
 import React from 'react';
 import './Header.css'
-import home_icon from '../../assets/home_icon.png'
-import account_icon from '../../assets/account.png'
-import cart_icon from '../../assets/cart.png'
-import search_icon from '../../assets/search.png'
-import location_item from '../../assets/location.png'
+
+import home_icon from '../../../../assets/home_icon.png'
+import account_icon from '../../../../assets/account.png'
+import cart_icon from '../../../../assets/cart.png'
+import search_icon from '../../../../assets/search.png'
+import location_item from '../../../../assets/location.png'
+
+import { Link } from 'react-router-dom';
+
 
 
 function Header(props) {
@@ -12,8 +16,10 @@ function Header(props) {
         <div className="main__header">
         <div className='header'>
             <div className='logo'>
+                <a href="/" className='tiki__logo'>
                 <img src="https://salt.tikicdn.com/ts/upload/0e/07/78/ee828743c9afa9792cf20d75995e134e.png" alt="" />
                 <span>Tốt và nhanh</span>
+                </a>
             </div>
             <div className='container'>
 
@@ -42,13 +48,14 @@ function Header(props) {
         <div className='bottem'>
             
                 <ul className='nav__list'>
-                    <li className='nav__item'>Điện gia dụng</li>
-                    <li className='nav__item'>Xe cộ</li>
-                    <li className='nav__item'>Mẹ & bé</li>
-                    <li className='nav__item'>Sách</li>
-                    <li className='nav__item'>Thể Thao</li>
-                    <li className='nav__item'>Khoẻ đẹp</li>
-                    <li className='nav__item'>Nhà cửa</li>
+                    <Link className="nav__item" to="/electricapp">Điện gia dụng</Link> 
+                    <Link className="nav__item" to="/vehical">Xe cộ</Link>  
+                    <Link className="nav__item" to="/motherbaby">Mẹ & bé</Link>
+                    <Link className="nav__item" to="/book">Sách</Link>
+                    <Link className="nav__item" to="/sport">Thể Thao</Link>
+                    <Link className="nav__item" to="/health">Khoẻ đẹp</Link>
+                    <Link className="nav__item" to="/house">Nhà cửa</Link>
+                    
                 </ul>
             
             <div className='location'>
@@ -64,6 +71,7 @@ function Header(props) {
             
 
         </div>
+        
         </div>
     );
 }

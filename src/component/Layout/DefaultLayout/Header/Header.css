@@ -8,11 +8,19 @@
 .logo{
     cursor: pointer;
     display: flex;
-    flex-direction: column;
-    color: rgb(0, 62, 161);
+
     margin-top: 8px;
     font-weight: 600;
     text-align: center;
+}
+
+.tiki__logo{
+    display: flex;
+    flex-direction: column;
+}
+.logo a{
+    text-decoration: none;
+    color: rgb(0, 62, 161);
 }
 .container{
     flex-direction: column;
@@ -84,7 +92,7 @@
     
 }
 .nav__list{
-    list-style: none;
+
     display: flex;
     height: 24px;
     width: 712px;
@@ -96,11 +104,16 @@
     margin: 10px;
 }
 
+.nav__list a{
+    text-decoration: none;
+}
+
 .nav__item{
     display: inline-block;
-    
     font-size: 15px;
     cursor: pointer;
+    color: rgb(128, 128, 137);
+    
 
 }
 .header__user{
